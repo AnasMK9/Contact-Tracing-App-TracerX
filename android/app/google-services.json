@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "620145060076",
-    "firebase_url": "https://contact-tracing-158ef.firebaseio.com",
-    "project_id": "contact-tracing-158ef",
-    "storage_bucket": "contact-tracing-158ef.appspot.com"
+    "project_number": "117877082692",
+    "firebase_url": "https://aman2-6beee.firebaseio.com",
+    "project_id": "aman2-6beee",
+    "storage_bucket": "aman2-6beee.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:620145060076:android:069bd18ff2c3e19c591dc9",
+        "mobilesdk_app_id": "1:117877082692:android:57132bf821725eeedb4a11",
         "android_client_info": {
-          "package_name": "com.diganta.contacttracingprototype"
+          "package_name": "com.cpagov.amantwo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "620145060076-eenal9k2ehevsuf8jo4i1vnrhvakrcim.apps.googleusercontent.com",
+          "client_id": "117877082692-r1opojemvhm0a0j11thrf15hgari854a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5NUHq00xK6bZWDIeVMKFSgzulEUqHk-A"
+          "current_key": "AIzaSyCHXMTOt70y9izwxAESJqSGULVQcgIeOhI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "620145060076-eenal9k2ehevsuf8jo4i1vnrhvakrcim.apps.googleusercontent.com",
+              "client_id": "117877082692-r1opojemvhm0a0j11thrf15hgari854a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,4 +1,4 @@
-package com.tapsecure.contacttracingprototype
+package com.cpagov.amantwo
 
 import io.flutter.embedding.android.FlutterActivity
 
