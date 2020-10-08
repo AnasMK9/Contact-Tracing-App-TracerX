@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:contacttracingprototype/components/rounded_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:nearby_connections/nearby_connections.dart';
-
+import 'package:contacttracingprototype/login.dart';
 import 'components/contact_card.dart';
 import 'constants.dart';
 
@@ -263,6 +264,15 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
               ),
             ),
           ),
+             RoundedButton(
+               title: 'Register',
+              colour: Colors.deepPurpleAccent,
+              onPressed: () {
+             Navigator.pushNamed(context, LoginScreen.id);
+
+
+    },
+             ),
         ],
       ),
     );
