@@ -3,7 +3,9 @@ import 'package:contacttracingprototype/constants.dart';
 import 'package:contacttracingprototype/nearby_interface.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
+import 'package:flutter/cupertino.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
@@ -64,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   colour: Colors.deepPurpleAccent,
                   onPressed: () async {
                     setState(() {
-                      showSpinner = true;
+                      showSpinner = false;
                     });
                     try {
                       final user = await _auth.signInWithEmailAndPassword(
@@ -76,10 +78,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       setState(() {
                         showSpinner = false;
                       });
-                    } catch (e) {
-                      print(e);
-                    }
-                  },
+                    } on AuthException catch  (e) {
+                      print('Failed with error code: ${e.code}');
+                      print(e.message);
+                    } },
                 ),
               ],
             ),

@@ -3,6 +3,7 @@ import 'package:contacttracingprototype/components/rounded_button.dart';
 import 'package:contacttracingprototype/constants.dart';
 import 'package:contacttracingprototype/nearby_interface.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
@@ -79,7 +80,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   colour: Colors.deepPurpleAccent,
                   onPressed: () async {
                     setState(() {
-                      showSpinner = true;
+                      showSpinner = false;
                     });
                     try {
                       final newUser =
@@ -94,8 +95,23 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       setState(() {
                         showSpinner = false;
                       });
-                    } catch (e) {
-                      print(e);
+                    } on AuthException catch (e) {
+
+    var message = 'Oops!'; // Default message
+    switch (e.code) {
+    case 'ERROR_WRONG_PASSWORD':
+    message = 'The password you entered is totally wrong!';
+    break;
+    // More custom messages ...
+    }
+    throw Exception(message); // Or extend this with a custom exception class
+    } catch (e) {
+    print('''
+    caught exception\n
+    $e
+  ''');
+    rethrow;
+
                     }
                   },
                 ),

@@ -7,6 +7,8 @@ import 'package:nearby_connections/nearby_connections.dart';
 import 'package:contacttracingprototype/login.dart';
 import 'components/contact_card.dart';
 import 'constants.dart';
+import 'package:contacttracingprototype/registration.dart';
+
 
 class NearbyInterface extends StatefulWidget {
   static const String id = 'nearby_interface';
@@ -265,7 +267,7 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
             ),
           ),
              RoundedButton(
-               title: 'Register',
+               title: 'Log in',
               colour: Colors.deepPurpleAccent,
               onPressed: () {
              Navigator.pushNamed(context, LoginScreen.id);
@@ -273,6 +275,15 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
 
     },
              ),
+          RoundedButton(
+            title: 'Register',
+            colour: Colors.deepPurpleAccent,
+            onPressed: () {
+              Navigator.pushNamed(context, RegistrationScreen.id);
+
+
+            },
+          ),
         ],
       ),
     );
